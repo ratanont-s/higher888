@@ -1,0 +1,154 @@
+@keyframes img-animate {
+    from {margin-top: 0;}
+    to {margin-top: 1em;}
+  }
+
+.page-index {
+    .top {
+        padding: 5em 0;
+        > .container {
+            position: relative;
+        }
+        &-img {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            mix-blend-mode: lighten;
+            animation: img-animate 2s ease-in-out infinite alternate;
+            @include media-breakpoint-down(sm){
+                transform: translateY(-30%);
+                opacity: 0.5;
+            }
+        }
+    }
+    .logos {
+        position: relative;
+        padding: 1.5em 0;
+        @include bg-blue-gd;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 3px;
+            @include border-gold;
+            filter: drop-shadow(0 0 1em #e5d9b0);
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        &-slider {
+            &-item {
+                padding: 0em 1em;
+                text-align: center;
+            }
+            .slick {
+                &-track {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .login {
+        position: relative;
+        overflow-x: hidden;
+        padding: 5em 0;
+        > .container {
+            position: relative;
+        }
+        &-img {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            mix-blend-mode: lighten;
+            animation: img-animate 2s ease-in-out 1s infinite alternate;
+            @include media-breakpoint-down(sm){
+                right: -30%;
+                transform: translateY(-75%);
+                opacity: 0.5;
+                z-index: -1;
+            }
+        }
+        &-jackpot {
+            text-align: center;
+            &-count {
+                background: url("../img/bg-jackpot-count.png") no-repeat center
+                    center/contain;
+                color: gold;
+                text-align: center;
+                font-size: 2em;
+            }
+        }
+        &-form {
+            .form-control {
+                background-color: transparent;
+                border-width: 0 0 1px;
+                border-radius: 0;
+                border-color: $primary;
+                color: $primary;
+                padding-left: 3em;
+                font-size: 1.5em;
+                &::placeholder {
+                    color: $primary;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+                &-username {
+                    background: url("../img/icon-username.svg") no-repeat left
+                        center/contain;
+                }
+                &-password {
+                    background: url("../img/icon-password.svg") no-repeat left
+                        center/contain;
+                }
+            }
+        }
+        &-btn {
+            filter: drop-shadow(0 0 0.25em rgba(white, 0.5));
+            @include hover {
+                filter: drop-shadow(0 0 0.5em rgba(white, 0.5)) saturate(1.5);
+            }
+        }
+    }
+    .promotion {
+        padding-bottom: 5em;
+        &-heading {
+            text-align: center;
+            margin-bottom: 5em;
+            position: relative;
+            overflow: hidden;
+            &::before,&::after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                height: 3px;
+                transform: translateY(-50%);
+                @include border-gold;
+            }
+            &::before{
+                left: 0;
+                right: calc(50% + (200px / 2));
+            }
+            &::after{
+                left: calc(50% + (200px / 2));
+                right: 0;
+            }
+            @include media-breakpoint-up(lg){
+                &::before{
+                    right: calc(50% + (533px / 2));
+                }
+                &::after{
+                    left: calc(50% + (533px / 2));
+                }
+            }
+        }
+    }
+}

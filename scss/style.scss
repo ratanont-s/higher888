@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+@import './variables';
+
+@import './bootstrap/bootstrap.scss';
+
+@import './header';
+@import './footer';
+
+// Pages
+@import './index';
+
+body{
+    font-family: 'Prompt', sans-serif;
+    background: url('../img/bg.png') no-repeat center top/cover;
+}
+
+img{
+    filter: blur(0);
+}

@@ -1,0 +1,39 @@
+@mixin bg-blue-gd {
+    background: rgb(29, 46, 61);
+    background: linear-gradient(
+        90deg,
+        rgba(29, 46, 61, 0) 0%,
+        rgba(68, 110, 128, 1) 50%,
+        rgba(29, 46, 61, 0) 100%
+    );
+}
+@mixin bg-gold-gd {
+    background: rgb(101, 54, 20);
+    background: linear-gradient(
+        0deg,
+        rgba(101, 54, 20, 1) 0%,
+        rgba(197, 162, 106, 1) 38%,
+        rgba(242, 226, 190, 1) 62%,
+        rgba(197, 162, 106, 1) 100%
+    );
+}
+@mixin border-gold {
+    background: rgb(229, 217, 176);
+    background: radial-gradient(
+        circle,
+        rgba(229, 217, 176, 1) 0%,
+        rgba(218, 186, 104, 0) 100%
+    );
+}
+@mixin bg-darkblue-gd {
+    background: rgb(68, 110, 128);
+    background: linear-gradient(
+        0deg,
+        rgba(68, 110, 128, 1) 0%,
+        rgba(0, 0, 12, 1) 100%
+    );
+}
+
+$primary: #eeca1e;
+
+$body-color: white;

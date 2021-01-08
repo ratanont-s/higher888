@@ -1,0 +1,56 @@
+header{
+    .navbar-dark{
+        >.container-xl{
+            position: relative;
+        }
+        .navbar-nav{
+            .nav{
+                &-item{
+                    &-logo{
+                        padding: 0;
+                        .nav-link{
+                            padding: 0;
+                        }
+                    }
+                }
+                &-link{
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    &-signin{
+                        @include bg-darkblue-gd;
+                        color: $primary;
+                        @include hover{
+                            color: $primary;
+                            filter: saturate(1.5) brightness(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .navbar-social{
+        text-align: center;
+        margin-top: 2em;
+        margin-bottom: 0;
+        li{
+            a{
+                display: inline-block;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    object-fit: contain;
+                }
+                @include hover{
+                    img{
+                        filter: brightness(1.1) drop-shadow(0 0 .25em rgba(white,.5));
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-up(lg){
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

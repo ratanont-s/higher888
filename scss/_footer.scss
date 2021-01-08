@@ -1,0 +1,19 @@
+footer{
+    position: relative;
+    padding: 2em 0;
+    p{
+        font-size: .5em;
+        font-weight: 300;
+        opacity: 0.75;
+        margin-bottom: 0;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        @include bg-gold-gd;
+    }
+}
