@@ -15,7 +15,7 @@
             left: 0;
             transform: translateY(-50%);
             mix-blend-mode: lighten;
-            animation: img-animate 2s ease-in-out infinite alternate;
+            // animation: img-animate 2s ease-in-out infinite alternate;
             @include media-breakpoint-down(sm){
                 transform: translateY(-30%);
                 opacity: 0.5;
@@ -68,7 +68,7 @@
             right: 0;
             transform: translateY(-50%);
             mix-blend-mode: lighten;
-            animation: img-animate 2s ease-in-out 1s infinite alternate;
+            // animation: img-animate 2s ease-in-out 1s infinite alternate;
             @include media-breakpoint-down(sm){
                 right: -30%;
                 transform: translateY(-75%);
