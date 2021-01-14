@@ -64,10 +64,7 @@
             transform: translateY(-50%);
             mix-blend-mode: lighten;
             @include media-breakpoint-down(sm){
-                right: -30%;
-                transform: translateY(-75%);
-                opacity: 0.5;
-                z-index: -1;
+                display: none;
             }
         }
         &-jackpot {
