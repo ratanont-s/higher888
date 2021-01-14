@@ -25,6 +25,12 @@
         rgba(218, 186, 104, 0) 100%
     );
 }
+@mixin text-gold-gd {
+    background: rgb(237,219,125);
+    background: linear-gradient(0deg, rgba(237,219,125,1) 0%, rgba(154,108,11,1) 13%, rgba(237,219,125,1) 45%, rgba(154,108,11,1) 89%, rgba(237,219,125,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 @mixin bg-darkblue-gd {
     background: rgb(68, 110, 128);
     background: linear-gradient(

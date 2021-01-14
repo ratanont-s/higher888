@@ -78,11 +78,9 @@
     <main>
         <section class="top">
             <div class="container">
+                <img src="./assets/img/top.png" alt="" class="img-fluid top-img">
                 <div class="row align-items-center">
-                    <div class="col-md text-center text-md-right">
-                        <img src="./assets/img/top.png" alt="" class="img-fluid top-img">
-                    </div>
-                    <div class="col-md text-center text-md-left">
+                    <div class="col-md offset-md-6 text-center text-md-left">
                         <picture>
                             <source media="(min-width:992px)" srcset="./assets/img/top-text.png">
                             <img src="./assets/img/top-text@0.5x.png"
@@ -93,6 +91,7 @@
             </div>
         </section>
         <section class="logos">
+            <img src="./assets/img/bg-chip.png" alt="" class="img-fluid logos-bg">
             <div class="container-xl px-0">
                 <div class="logos-slider">
                     <div class="logos-slider-item">
@@ -121,25 +120,34 @@
         </section>
         <section class="login">
             <div class="container">
+                <img src="./assets/img/login.png" alt="" class="img-fluid login-img">
                 <div class="row">
-                    <div class="col-md">
-                        <div class="login-jackpot">
+                    <div class="col-md-5">
+                        <div class="login-jackpot mb-5">
                             <picture>
                                 <source media="(min-width:992px)" srcset="./assets/img/jackpot.png">
                                 <img src="./assets/img/jackpot@0.5x.png" alt="Jackpot progressive" class="img-fluid">
                             </picture>
-                            <p class="login-jackpot-count">21,222,000.73</p>
+                            <p class="login-jackpot-count">
+                                <span>21,222,000.73</span>
+                            </p>
                         </div>
                         <form action="" class="login-form">
-                            <div class="form-group">
-                                <label for="username" class="sr-only">Username</label>
-                                <input type="text" class="form-control form-control-username" id="username"
-                                    name="username" placeholder="Username">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="sr-only">Password</label>
-                                <input type="password" class="form-control form-control-password" id="password"
-                                    name="password" placeholder="Password">
+                            <div class="login-form-input">
+                                <div class="light">
+                                    <img src="./assets/img/light.png" alt="" class="light-img light-img-top">
+                                    <img src="./assets/img/light.png" alt="" class="light-img light-img-bottom">
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="sr-only">Username</label>
+                                    <input type="text" class="form-control form-control-username" id="username"
+                                        name="username" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="sr-only">Password</label>
+                                    <input type="password" class="form-control form-control-password" id="password"
+                                        name="password" placeholder="Password">
+                                </div>
                             </div>
                             <div class="form-row mt-5">
                                 <div class="col-6">
@@ -155,9 +163,6 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-7">
-                        <img src="./assets/img/login.png" alt="" class="img-fluid login-img">
-                    </div>
                 </div>
             </div>
         </section>
@@ -171,17 +176,17 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-6 col-md mb-4 mb-md-0">
-                        <a href="#">
+                        <a href="#" class="promotion-link">
                             <img src="./assets/img/promotion/promotion-1.png" alt="" class="img-fluid">
                         </a>
                     </div>
                     <div class="col-6 col-md mb-4 mb-md-0">
-                        <a href="#">
+                        <a href="#" class="promotion-link">
                             <img src="./assets/img/promotion/promotion-2.png" alt="" class="img-fluid">
                         </a>
                     </div>
                     <div class="col-6 col-md mb-4 mb-md-0">
-                        <a href="#">
+                        <a href="#" class="promotion-link">
                             <img src="./assets/img/promotion/promotion-3.png" alt="" class="img-fluid">
                         </a>
                     </div>

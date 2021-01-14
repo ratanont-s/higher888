@@ -12,7 +12,9 @@
 
 body{
     font-family: 'Prompt', sans-serif;
-    background: url('../img/bg.png') no-repeat center top/cover;
+    background: url('../img/bg.jpg') no-repeat center top/cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 img{
