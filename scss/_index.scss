@@ -1,6 +1,9 @@
 .page-index {
     .top {
-        padding: 5em 0;
+        padding: 2.5em 0;
+        @include media-breakpoint-up(lg){
+            padding: 5em 0;
+        }
         > .container {
             position: relative;
         }
@@ -62,8 +65,11 @@
     }
     .login {
         position: relative;
-        padding: 5em 0;
+        padding: 2.5em 0;
         overflow: hidden;
+        @include media-breakpoint-up(lg){
+            padding: 5em 0;
+        }
         > .container {
             position: relative;
         }
@@ -146,10 +152,16 @@
         }
     }
     .promotion {
-        padding-bottom: 5em;
+        padding-bottom: 2.5em;
+        @include media-breakpoint-up(lg){
+            padding-bottom: 5em;
+            &-heading{
+                margin-bottom: 5em;
+            }
+        }
         &-heading {
             text-align: center;
-            margin-bottom: 5em;
+            margin-bottom: 2.5em;
             position: relative;
             overflow: hidden;
             &::before,&::after{
