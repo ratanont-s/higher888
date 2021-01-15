@@ -11,6 +11,13 @@
             transform: translateY(-50%);
             mix-blend-mode: lighten;
         }
+        @include media-breakpoint-down(sm){
+            background: url('../img/login.png') no-repeat right -40px bottom -40px;
+            background-size: contain;
+            &-img,&-text{
+                visibility: hidden;
+            }
+        }
     }
     .logos {
         position: relative;
@@ -34,8 +41,11 @@
         }
         &-bg{
             position: absolute;
-            bottom: -50%;
+            bottom: 70%;
             right: 0;
+            @include media-breakpoint-up(md){
+                bottom: -50%;
+            }
         }
         &-slider {
             &-item {
