@@ -14,7 +14,7 @@
         @include media-breakpoint-down(sm){
             background: url('../img/login.png') no-repeat right -40px bottom -40px;
             background-size: contain;
-            &-img,&-text{
+            &-img{
                 visibility: hidden;
             }
         }
