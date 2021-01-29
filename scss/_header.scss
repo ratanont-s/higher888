@@ -1,25 +1,27 @@
-header{
-    .navbar-dark{
-        >.container-xl{
+header {
+    position: relative;
+    z-index: 99999;
+    .navbar-dark {
+        > .container-xl {
             position: relative;
         }
-        .navbar-nav{
-            .nav{
-                &-item{
-                    &-logo{
+        .navbar-nav {
+            .nav {
+                &-item {
+                    &-logo {
                         padding: 0;
-                        .nav-link{
+                        .nav-link {
                             padding: 0;
                         }
                     }
                 }
-                &-link{
+                &-link {
                     padding-left: 1em;
                     padding-right: 1em;
-                    &-signin{
+                    &-signin {
                         @include bg-darkblue-gd;
                         color: $primary;
-                        @include hover{
+                        @include hover {
                             color: $primary;
                             filter: saturate(1.5) brightness(1.1);
                         }
@@ -28,29 +30,66 @@ header{
             }
         }
     }
-    .navbar-social{
+    .navbar-social {
         text-align: center;
         margin-top: 2em;
         margin-bottom: 0;
-        li{
-            a{
+        li {
+            a {
                 display: inline-block;
-                img{
+                img {
                     width: 30px;
                     height: 30px;
                     object-fit: contain;
                 }
-                @include hover{
-                    img{
-                        filter: brightness(1.1) drop-shadow(0 0 .25em rgba(white,.5));
+                @include hover {
+                    img {
+                        filter: brightness(1.1)
+                            drop-shadow(0 0 0.25em rgba(white, 0.5));
                     }
                 }
             }
         }
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
             position: absolute;
             top: 0;
             right: 0;
+        }
+    }
+    
+    .offcanvas-collapse .close{
+        display: none;
+    }
+    @include media-breakpoint-down(md) {
+        .offcanvas-collapse {
+            position: fixed;
+            top: 0; /* Height of navbar */
+            bottom: 0;
+            left: 100%;
+            width: 100%;
+            padding: 1rem;
+            overflow-y: auto;
+            visibility: hidden;
+            background-color: rgba(#1d2e3d, 0.9);
+            backdrop-filter: blur(0.25rem);
+            transition: visibility 0.3s ease-in-out,
+                -webkit-transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out,
+                -webkit-transform 0.3s ease-in-out;
+            &.open {
+                visibility: visible;
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+            .close {
+                display: inline-block;
+                text-shadow: none;
+                color: white;
+                font-weight: lighter;
+                font-size: 4em;
+                line-height: 0.5;
+            }
         }
     }
 }
